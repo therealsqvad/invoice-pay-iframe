@@ -1,0 +1,11 @@
+.modal-content {
+    z-index: 1050;
+    width: 650px!important;
+    padding: 10px!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+.modal-dialog {
+    max-width: max-content;
+}
