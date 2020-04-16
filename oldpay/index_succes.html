@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+   <div class="content">
+    <form method=get action="">
+    <div class="container">
+        <div class="wrapper">
+            <div class="wrapper__head">
+                <div class = "header-left">
+                    <a href="#" class="logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <div class = "shieldImgBlock">
+                        <img src="img/shield.svg" alt="" class = "shieldImg">
+                    </div>
+                    <div class="shield">
+                        <div class = "shieldText">
+                            The first single secure<br>payment account
+                        </div>
+                    </div>
+                </div>
+                <div class = "header-right">
+                    <div class = "bonusImg">
+                        <img src="img/bonus.svg" alt="">
+                    </div>
+                    <div class = "numberOfBonuses">
+                        <div id = "numberOfBonuses">
+                           Загрузка
+                        </div>
+                    </div>
+                    <div class = "bonusText">
+                        бонусов <br>у вас
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper__body">
+               <div class="form">
+                   <div class = "ticketBlock">
+                       <img src = "img/ticket.png" alt = "" class = "ticketImg">
+                   </div>
+                   <div class = "infoBlock">
+                       <div class = "infoHead">Оплата авиабилетов</div>
+                       <div class = "infoBoldBlock">
+                           <span class = "infoBold">Заказ:</span><span id = "order">какой-то</span>
+                        </div>
+                   </div>
+                   <div class = "priceBlock" id = "message">Загрузка</div>
+                   <div class = "errorCode"></div>
+                   <div class = "errorMessage"></div>
+                   <div class = "bonusBlock">
+                        <div class = "bonusLine">
+                            <div class = "bonusInfoText">Мы <br>списали</div>
+                            <div class = "bonusPrice">
+                                <div class = bonusPriceImg>
+                                    <img src = "./img/wallet.svg" alt = "">
+                                </div>
+                                <div class = "bonusPriceInfo">
+                                    <span>Деньги</span><br>
+                                    <span class = "bonusPriceText" id = "price2">Загрузка</span>
+                                </div>
+                            </div>
+                            <div class = "numberBonus">
+                                <span class = "bonusPlusText">Бонусов получено</span>
+                                <div class = "infoBonusPlus">
+                                   <img src="img/bonus.svg" alt="" ><span id = "getBonuses">Загрузка</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <dutton onclick="window.location='http://www.google.com'" class = "btn btn-blue" id = "changeCard">Повторить с другой картой</dutton>
+                    <div id = "checkBlock">
+                        <button class = "btn btn-com" id = "addComm" type = "button">Показать чек</button>
+                        <div class = "commentBlock">
+                            <button class = "hideComm" id = "hideComm" type = "button">Скрыть чек<img src = "./img/hide.png" alt = ""></button>
+                            <div class = "check">чек</div>
+                        </div>
+                   </div>
+                   <div id = "sendCheck">
+                       <span>Получить чек на телефон</span><br>
+                       <div class = "telLine">
+                           <input type = "tel" id = "telNumber" placeholder="+7(000) 000-0000"><button class = "sendNumber" type = "button"><img src = "./img/send.svg" alt = ""></button>
+                       </div><br>
+                       <div class = "result"></div>
+                   </div>
+                   <div id = "myPageBlock">
+                       <dutton onclick="window.location=''" class = "btn btn-blue" id = "myPage">Мой инвойс</dutton>
+                       <span>Вся информация о ваших покупках, новости и акции мест, где вы покупаете а также где получить и потратить бонусы</span>
+                   </div>
+                    </div>
+                </div>
+               
+        </div>
+        <div class = "footerText">
+            <span>
+                Страница ввода реквизитов сертифицирована согласно международному стандарту безопасности индустрии платежных карт
+            </span>
+            <img src="img/pci.png"  alt="">
+        </div>
+        
+    </div>
+    </form>
+   </div>
+   <div id = "inf">
+        <input id = "TotalBonuses" value = "300">
+        <input id = "BonusesToSpend" value = "-32">
+        <input id = "messageInfo" value = "150000">
+        <input id = "messageText" value = "Ошибка потому что ошибка">
+        <input id = "isShowCheck" value = "1">
+        <input id = "isSendCheck" value = "1">
+        <input id = "isShowMyPage" value = "1">
+   </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="pay/js/app2.js"></script>
+</body>
+</html>
