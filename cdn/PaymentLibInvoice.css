@@ -6,14 +6,8 @@
     min-height:  460px;
 }
 
-@media handheld {
-    #InvoicePaymentFrame {
-        border:    0;
-        width:    100%;
-        max-width: 400px;
-        height:     100%;
-        min-height:  460px;
-    }
+#invoice-modal-dialog {
+    max-width: 710px;
 }
 
 #invoice-modal-content {
@@ -24,16 +18,20 @@
     margin-left: auto!important;
 }
 
-@media handheld {
+#invoice-modal-body {
+    padding: 0;
+}
+
+@media screen and (max-width: 400px) {
     #invoice-modal-content {
         width: 300px!important;
     }
-}
-
-#invoice-modal-dialog {
-    max-width: 710px;
-}
-
-#invoice-modal-body {
-    padding: 0;
+    #invoice-modal-dialog {
+        max-width: 300px;
+    }
+    #InvoicePaymentFrame {
+        /*max-width: 300px;*/
+        min-width: 300px;
+        min-height:  460px;
+    }
 }
