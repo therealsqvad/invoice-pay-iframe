@@ -6,27 +6,27 @@ Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
 
 
 /*
-CONTENTS: 
-	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
-	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+CONTENTS:
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited).
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar.
 	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
-	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
-	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
-	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars.
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars.
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
 */
 
 
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-1. BASIC STYLE  
+1. BASIC STYLE
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-	.mCustomScrollbar{ -ms-touch-action: none; touch-action: none; /* MSPointer events - direct all pointer events to js */ }
+	.mCustomScrollbar{ -ms-touch-action: none; touch-action: none; /* MSPointer events - direct all pointer events to cdn */ }
 	.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
-	
+
 	.mCustomScrollBox{ /* contains plugin's markup */
 		position: relative;
 		overflow: hidden;
@@ -44,9 +44,9 @@ CONTENTS:
 
 
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-2. VERTICAL SCROLLBAR 
+2. VERTICAL SCROLLBAR
 y-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
@@ -54,12 +54,12 @@ y-axis
 	.mCSB_inside > .mCSB_container{ margin-right: 30px; }
 
 	.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
-	
+
 	.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
 		margin-right: 0;
 		margin-left: 30px;
 	}
-	
+
 	.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
 
 	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
@@ -73,13 +73,13 @@ y-axis
 	}
 
 	.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
-	
-	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
+
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools,
 	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
 		right: auto;
 		left: 0;
 	}
-	
+
 	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
 
 	.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
@@ -87,7 +87,7 @@ y-axis
 		top: 0;
 		left: 0;
 		bottom: 0;
-		right: 0; 
+		right: 0;
 		height: auto;
 	}
 
@@ -115,11 +115,11 @@ y-axis
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
 		text-align: center;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	.mCSB_scrollTools .mCSB_buttonUp,
 	.mCSB_scrollTools .mCSB_buttonDown{
 		display: block;
@@ -135,9 +135,9 @@ y-axis
 
 
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-3. HORIZONTAL SCROLLBAR 
+3. HORIZONTAL SCROLLBAR
 x-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
@@ -146,7 +146,7 @@ x-axis
 		margin-right: 0;
 		margin-bottom: 30px;
 	}
-	
+
 	.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }
 
 	.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */
@@ -182,10 +182,10 @@ x-axis
 		height: 4px;
 		margin: 6px auto;
 	}
-	
-	
-	
-	
+
+
+
+
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{
@@ -197,17 +197,17 @@ x-axis
 		margin: 0 auto;
 		cursor: pointer;
 	}
-	
+
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
 
 
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-4. VERTICAL AND HORIZONTAL SCROLLBARS 
-yx-axis 
+4. VERTICAL AND HORIZONTAL SCROLLBARS
+yx-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -223,62 +223,62 @@ yx-axis
 		margin-right: 30px;
 		margin-bottom: 30px;
 	}
-	
+
 	.mCSB_container_wrapper > .mCSB_container{
 		padding-right: 30px;
 		padding-bottom: 30px;
 	}
-	
+
 	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }
-	
+
 	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }
-	
+
 	/* non-visible horizontal scrollbar */
 	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }
-	
+
 	/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
-	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal,
 	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }
-	
+
 	/* RTL direction/left-side scrollbar */
 	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }
-	
+
 	/* non-visible scrollbar/RTL direction/left-side scrollbar */
 	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }
-	
+
 	.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */
 		margin-right: 0;
 		margin-left: 30px;
 	}
-	
-	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ 
-		padding-right: 0; 
+
+	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{
+		padding-right: 0;
 		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 	}
-	
-	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ 
-		padding-bottom: 0; 
+
+	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{
+		padding-bottom: 0;
 		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 	}
-	
+
 	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{
 		margin-right: 0; /* non-visible scrollbar */
 		margin-left: 0;
 	}
-	
+
 	/* non-visible horizontal scrollbar */
 	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
 
 
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-5. TRANSITIONS  
+5. TRANSITIONS
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-	.mCSB_scrollTools, 
-	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCSB_scrollTools,
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 	.mCSB_scrollTools .mCSB_buttonUp,
 	.mCSB_scrollTools .mCSB_buttonDown,
 	.mCSB_scrollTools .mCSB_buttonLeft,
@@ -288,29 +288,29 @@ yx-axis
 		-o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
 		transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
 	}
-	
-	 
 
 
-/* 
+
+
+/*
 ------------------------------------------------------------------------------------------------------------------------
-6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-	/* 
+	/*
 	----------------------------------------
-	6.1 THEMES 
+	6.1 THEMES
 	----------------------------------------
 	*/
-	
+
 	/* default theme ("light") */
 
 	.mCSB_scrollTools{ opacity: 0.75; }
-	
+
 	.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
 	.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; }
-	
+
 
 
 
@@ -321,7 +321,7 @@ yx-axis
 	.mCSB_scrollTools .mCSB_draggerRail{background-color: #eee; }
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #2072b0;	}
-	
+
 
 	.mCSB_scrollTools .mCSB_buttonUp,
 	.mCSB_scrollTools .mCSB_buttonDown,
@@ -329,13 +329,13 @@ yx-axis
 	.mCSB_scrollTools .mCSB_buttonRight{
 		background-image: url(mCSB_buttons.png); /* css sprites */
 		background-repeat: no-repeat;
-		opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
+		opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)";
 	}
 
 	.mCSB_scrollTools .mCSB_buttonUp{
 		background-position: 0 0;
-		/* 
-		sprites locations 
+		/*
+		sprites locations
 		light: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
 		dark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
 		*/
@@ -343,7 +343,7 @@ yx-axis
 
 	.mCSB_scrollTools .mCSB_buttonDown{
 		background-position: 0 -20px;
-		/* 
+		/*
 		sprites locations
 		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
 		dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
@@ -352,8 +352,8 @@ yx-axis
 
 	.mCSB_scrollTools .mCSB_buttonLeft{
 		background-position: 0 -40px;
-		/* 
-		sprites locations 
+		/*
+		sprites locations
 		light: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
 		dark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
 		*/
@@ -361,15 +361,14 @@ yx-axis
 
 	.mCSB_scrollTools .mCSB_buttonRight{
 		background-position: 0 -56px;
-		/* 
-		sprites locations 
+		/*
+		sprites locations
 		light: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
 		dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
 		*/
 	}
 
 
-	
-  
-	
-	 
+
+
+
