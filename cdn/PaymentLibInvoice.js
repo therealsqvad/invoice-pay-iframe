@@ -6,5 +6,12 @@ var Invoice = {
         InvoicePaymentFrame.id = 'InvoicePaymentFrame';
         InvoicePaymentFrame.setAttribute('src', `https://paytest.invoice.su/frame/p${orderId}`);
         InvoiceContainer.innerHTML = InvoicePaymentFrame.outerHTML;
+    },
+    InvoiceRenderFrame: (orderId) => {
+        const InvoiceContainer = document.getElementById('InvoiceContainer');
+        const InvoicePaymentFrame = document.createElement('iframe');
+        InvoicePaymentFrame.id = 'InvoicePaymentFrame';
+        InvoicePaymentFrame.setAttribute('src', `https://paytest.invoice.su/frame/p${orderId}`);
+        InvoiceContainer.innerHTML = InvoicePaymentFrame.outerHTML;
     }
-}
+};
