@@ -12,12 +12,12 @@
 </head>
 <body class="w-100 h-100">
 <label for="order">Введите ID заказа</label>
-    <input name="order" id="order" type="text" />
-<button type="button" class="btn btn-primary m-5" data-toggle="modal" data-target="#payInvoiceModal" onclick="Invoice.InvoiceRenderModalFrame(document.getElementById('order').value)">
-    Оплатить с Invoice (модальное окно)
+    <input name="order" id="order" type="text"  value="15876986515525"/>
+<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal" onclick="Invoice.InvoiceRenderModalFrame(document.getElementById('order').value)">
+    modal
 </button>
-<button type="button" class="btn btn-primary m-5" data-toggle="modal" data-target="#payInvoiceModal" onclick="Invoice.InvoiceRenderFrame(document.getElementById('order').value)">
-    Оплатить с Invoice (inline)
+<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal" onclick="Invoice.InvoiceRenderFrame(document.getElementById('order').value)">
+    inline
 </button>
     <div id="InvoiceContainer"></div>
 <!--    <script src="https://gitcdn.link/repo/therealsqvad/invoice-pay-iframe/master/cdn/PaymentLibInvoice.min.js" defer></script>-->

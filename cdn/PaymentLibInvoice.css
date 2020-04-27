@@ -1,7 +1,6 @@
 #InvoicePaymentFrame {
     border:    0;
     width:    100%;
-    min-width: 710px;
     height:     100%;
     min-height:  460px;
 }
@@ -10,9 +9,12 @@
     max-width: 710px;
 }
 
+.modal-dialog {
+  margin: .5rem;
+}
+
 #invoice-modal-content {
     z-index: 1050;
-    width: 710px!important;
     padding: 0px!important;
     margin-right: auto!important;
     margin-left: auto!important;
@@ -23,15 +25,24 @@
 }
 
 @media screen and (max-width: 400px) {
-    #invoice-modal-content {
-        width: 300px!important;
-    }
-    #invoice-modal-dialog {
-        max-width: 300px;
-    }
     #InvoicePaymentFrame {
-        /*max-width: 300px;*/
         min-width: 300px;
         min-height:  460px;
     }
+}
+
+.modal-dialog-centered {
+  min-height: 0!important;
+}
+
+/*@media (min-width: 576px) {*/
+/*   {*/
+/*    min-height: calc(100% - (.5rem * 2));*/
+/*  }*/
+/*}*/
+
+@media (min-width: 727px) {
+  .modal-dialog {
+    margin: 1.75rem auto;
+  }
 }
