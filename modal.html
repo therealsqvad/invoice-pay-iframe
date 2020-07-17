@@ -15,11 +15,11 @@
     <div class="my-2"><label for="order">Введите ID заказа</label>
         <input name="order" id="order" type="text" value="15876986515525"/>
         <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal"
-                onclick="Invoice.iFrame.modal.show('order', document.getElementById('order').value)">
+                onclick="Invoice.iFrame_demo.modal.show('order', document.getElementById('order').value)">
             modal
         </button>
         <button type="button" class="btn btn-primary "
-                onclick="Invoice.iFrame.inline.show('order', document.getElementById('order').value)">
+                onclick="Invoice.iFrame_demo.inline.show('order', document.getElementById('order').value)">
             inline
         </button>
     </div>
@@ -27,21 +27,21 @@
     <div class="my-2"><label for="order">Введите сумму для оплаты</label>
         <input name="order" id="amount" type="text" value="100"/>
         <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal"
-                onclick="Invoice.iFrame.modal.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
+                onclick="Invoice.iFrame_demo.modal.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
             modal
         </button>
         <button type="button" class="btn btn-primary "
-                onclick="Invoice.iFrame.inline.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
+                onclick="Invoice.iFrame_demo.inline.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
             inline
         </button>
     </div>
     <div><label>Оплатить на свободную сумму</label>
         <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal"
-                onclick="Invoice.iFrame.modal.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4')">
+                onclick="Invoice.iFrame_demo.modal.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4')">
             modal
         </button>
         <button type="button" class="btn btn-primary "
-                onclick="Invoice.iFrame.inline.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4')">
+                onclick="Invoice.iFrame_demo.inline.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4')">
             inline
         </button>
     </div>
