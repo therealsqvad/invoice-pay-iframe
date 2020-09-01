@@ -11,6 +11,7 @@
 <!--    <link href="https://gitcdn.link/repo/therealsqvad/invoice-pay-iframe/master/cdn/PaymentLibInvoice.min.css" rel="stylesheet" type="text/css" media="all" />-->
 </head>
 <body class="w-100 h-100">
+        <!-- <iframe src="https://localhost:3000/service/t016ebc125af54538b525c1bf022be50c" width="100%" height="100%" style="z-index:9999;position:fixed" /> -->
 <div class="d-flex flex-column px-4">
     <div class="my-2"><label for="order">Введите ID заказа</label>
         <input name="order" id="order" type="text" value="15876986515525"/>
@@ -27,27 +28,33 @@
     <div class="my-2"><label for="order">Введите сумму для оплаты</label>
         <input name="order" id="amount" type="text" value="100"/>
         <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal"
-                onclick="Invoice.iFrame_demo.modal.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
+                onclick="Invoice.iFrame_demo.modal.show('terminal','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
             modal
         </button>
         <button type="button" class="btn btn-primary "
-                onclick="Invoice.iFrame_demo.inline.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
+                onclick="Invoice.iFrame_demo.inline.show('terminal','532b3e31bd614a7ac4e7edbd87bd07c4',  document.getElementById('amount').value)">
             inline
         </button>
     </div>
     <div><label>Оплатить на свободную сумму</label>
         <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#payInvoiceModal"
-                onclick="Invoice.iFrame_demo.modal.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4')">
+                onclick="Invoice.iFrame_demo.modal.show('terminal','532b3e31bd614a7ac4e7edbd87bd07c4')">
             modal
         </button>
         <button type="button" class="btn btn-primary "
-                onclick="Invoice.iFrame_demo.inline.show('amount','532b3e31bd614a7ac4e7edbd87bd07c4')">
+                onclick="Invoice.iFrame_demo.inline.show('terminal','532b3e31bd614a7ac4e7edbd87bd07c4')">
             inline
         </button>
     </div>
+    <button type="button" class="btn btn-primary w-25"
+    onclick="Invoice.showModal()">
+Show
+</button>
 </div>
     <div id="InvoiceContainer"></div>
     <script src="cdn/Invoice.Payment.js" defer></script>
 <!--    <script src="https://gitcdn.link/repo/therealsqvad/invoice-pay-iframe/master/cdn/PaymentLibInvoice.min.js" defer></script>-->
+<!-- <iframe id="InvoiceModal" src="https://localhost:3000/service/t016ebc125af54538b525c1bf022be50c" style="width: 100%; height: 100%; z-index: 99999; position: fixed; top: 0px; left: 0px; display: none;"> -->
+    
 </body>
 </html>
